@@ -32,6 +32,7 @@
     --white:#F7F4EC;
     --black:#0B0A08;
     --muted: rgba(11,10,8,0.5);
+    --muted-light: rgba(247,244,236,0.55);
     --line: rgba(11,10,8,0.12);
   }
 
@@ -66,10 +67,10 @@
   }
   .issue-tag a{ color:var(--muted); text-decoration:none; }
 
-  /* OPENING PHOTO — no text, unlabeled, lets the reader wonder */
+  /* OPENING PHOTO — entire screen, unlabeled */
   .full-bleed{
     width:100%;
-    height:min(88vh, 800px);
+    height:100vh;
     overflow:hidden;
   }
   .full-bleed img{
@@ -82,7 +83,7 @@
   .reveal{
     max-width:760px;
     margin:0 auto;
-    padding:min(10vh, 100px) 32px min(6vh, 56px);
+    padding:min(11vh, 100px) 32px min(7vh, 60px);
     text-align:center;
   }
   .kicker{
@@ -100,32 +101,75 @@
     font-size:clamp(32px, 6vw, 56px);
     line-height:1.05;
     letter-spacing:-0.01em;
-    margin-bottom:min(6vh, 56px);
-  }
-
-  .lede{
-    font-family:'Fraunces', serif;
-    font-weight:400;
-    font-style:italic;
-    font-size:clamp(20px, 3vw, 27px);
-    line-height:1.5;
-    text-align:left;
   }
 
   /* BODY */
   .body-copy{
     max-width:680px;
     margin:0 auto;
-    padding:0 32px min(14vh, 140px);
+    padding:min(6vh, 50px) 32px;
   }
   .body-copy p{
     font-size:17px;
     line-height:1.85;
     margin-bottom:28px;
-    text-align:left;
   }
-  .body-copy p:first-of-type{
-    margin-top:0;
+  .body-copy p:last-child{ margin-bottom:0; }
+  .lede{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(20px, 3vw, 27px);
+    line-height:1.5;
+  }
+
+  /* MUSEUM FACT PLACARD — isolated numeric fact on black */
+  .placard{
+    background:var(--black);
+    color:var(--white);
+    padding:min(18vh, 180px) 32px;
+    text-align:center;
+  }
+  .placard-number{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(56px, 12vw, 140px);
+    line-height:0.95;
+    letter-spacing:-0.02em;
+    margin-bottom:22px;
+  }
+  .placard-caption{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted-light);
+  }
+  .placard-pair{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:min(10vw, 100px);
+  }
+  .placard-pair .placard-item{ flex:0 0 auto; }
+
+  /* SEQUENCE PLACARD — three stacked short lines on black */
+  .sequence{
+    background:var(--black);
+    color:var(--white);
+    padding:min(18vh, 180px) 32px;
+    text-align:center;
+  }
+  .sequence p{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(30px, 6vw, 58px);
+    line-height:1.3;
+    letter-spacing:-0.01em;
+  }
+
+  .final-space{
+    height:min(16vh, 140px);
   }
 
   footer{
@@ -156,28 +200,42 @@
 </section>
 
 <section class="body-copy">
-
   <p class="lede">By almost any conventional measure, the chair should have been thrown away.</p>
-
   <p>Its legs have been sawed down and fitted with small brass hardware — brackets and half of a turnbuckle on each leg, allowing every corner to be raised or lowered independently, so that no two legs necessarily match. Inside the frame, wiring and a length of wood have been added simply to keep the thing from collapsing. The seat has the general shape of something meant for a card table, not a concert stage: a plain wooden folding chair, the kind that would once have come stacked six to a set, unremarkable except that this one no longer folds quite right and no longer looks like the others in whatever set it came from.</p>
-
   <p>It belonged to Glenn Gould.</p>
-
-  <p>The chair began, sometime in the 1930s, as one of a set of folding bridge chairs manufactured in London, Ontario — the kind of furniture built for a card game, not a career. In 1953, Gould's father, Russell "Bert" Gould, modified it for his son, sawing roughly four inches off each leg and rigging a mechanism that let every leg be adjusted on its own. The result put Gould about fourteen inches off the ground — some six inches lower than a standard piano bench — low enough that, at the keyboard, his face sometimes hovered only inches above the keys.</p>
-
-  <p>Gould asked for this specifically. His technique, built around close, controlled contact with the keys rather than height and leverage, seemed to depend on sitting almost inside the instrument rather than above it. Once the chair existed, he stopped using anything else. Not occasionally, not as a preference among several options — every concert, every recording, for the next twenty-nine years, until his death in 1982.</p>
-
-  <p>He also stopped travelling without it. Accounts from recording engineers describe him arriving at sessions already carrying the chair alongside towels, pills, and bottles of water, adjusting each leg by hand before he would sit down to play — a small, private ritual repeated before a Bach recording the same way it would be repeated before anything else. At various points, his management and his record label tried to find or build a sturdier replacement. According to his longtime recording engineer Lorne Tulk, Gould's father modified at least one backup chair the same way, and Gould carried both for a time — but there's no real evidence he ever seriously used anything except the original. Every substitute, however carefully built, was apparently not quite it.</p>
-
-  <p>That kind of loyalty asks a great deal of an object, and this one visibly paid for it. Decades of use wore down the upholstery and loosened the frame until the chair needed internal reinforcement just to keep standing — the wiring and wood bracing weren't a design feature, they were damage control. By the end, it looked less like an instrument's companion piece than something salvaged from a curbside pile: a chair that had been fixed just enough times to keep functioning, and no more.</p>
-
-  <p>Which raises the more interesting question the chair leaves behind, once the biography is set aside: what does good design even mean, if the answer depends entirely on who's using it? Judged on its own, this is not a well-made chair. It is unstable enough to require internal bracing. Its legs don't match. It has been pushed so far past its original purpose that it barely qualifies as a chair anymore. And yet, for exactly one person, for exactly one specific and unusual way of sitting at a piano, it seems to have worked perfectly — well enough that its owner would rather keep repairing a barely-standing folding chair than trust a new one built to the same specifications.</p>
-
-  <p>After Gould's death in October 1982, the chair passed to Library and Archives Canada along with the rest of his estate — some two hundred boxes of personal and professional material, acquired the following year. For over two decades it sat in a glass case in the library's music division on Wellington Street in Ottawa, visible to anyone who happened to walk past on the way to the elevators. In 2005 it was moved into storage, brought out only for occasional exhibitions. In June 2012, Library and Archives Canada transferred it, along with Gould's Steinway CD 318, as a permanent gift to the National Arts Centre.</p>
-
-  <p>The piano now has a fixed public home at the NAC, on permanent display outside Southam Hall. The chair does not. It's kept by the same institution, in the same city, but shown only on special occasions — which means that for most of any given year, the object this entire story is about is sitting somewhere most people will never see it: low to the ground, legs slightly uneven, waiting to be brought out again.</p>
-
+  <p>The chair began, sometime in the 1930s, as one of a set of folding bridge chairs manufactured in London, Ontario — the kind of furniture built for a card game, not a career. In 1953, Gould's father, Russell "Bert" Gould, modified it for his son, sawing roughly four inches off each leg and rigging a mechanism that let every leg be adjusted on its own.</p>
 </section>
+
+<section class="placard">
+  <div class="placard-pair">
+    <div class="placard-item">
+      <p class="placard-number">4″</p>
+      <p class="placard-caption">Removed from each leg</p>
+    </div>
+    <div class="placard-item">
+      <p class="placard-number">14″</p>
+      <p class="placard-caption">How high Gould sat at the keyboard</p>
+    </div>
+  </div>
+</section>
+
+<section class="body-copy">
+  <p>The result put Gould some six inches lower than a standard piano bench — low enough that, at the keyboard, his face sometimes hovered only inches above the keys. Gould asked for this specifically. His technique, built around close, controlled contact with the keys rather than height and leverage, seemed to depend on sitting almost inside the instrument rather than above it. Once the chair existed, he stopped using anything else. Not occasionally, not as a preference among several options — every concert, every recording, for the next twenty-nine years, until his death in 1982.</p>
+  <p>He also stopped travelling without it. Accounts from recording engineers describe him arriving at sessions already carrying the chair alongside towels, pills, and bottles of water, adjusting each leg by hand before he would sit down to play — a small, private ritual repeated before a Bach recording the same way it would be repeated before anything else. At various points, his management and his record label tried to find or build a sturdier replacement. According to his longtime recording engineer Lorne Tulk, Gould's father modified at least one backup chair the same way, and Gould carried both for a time — but there's no real evidence he ever seriously used anything except the original. Every substitute, however carefully built, was apparently not quite it.</p>
+</section>
+
+<section class="sequence">
+  <p>Every concert.<br>Every recording.<br>Twenty-nine years.</p>
+</section>
+
+<section class="body-copy">
+  <p>That kind of loyalty asks a great deal of an object, and this one visibly paid for it. Decades of use wore down the upholstery and loosened the frame until the chair needed internal reinforcement just to keep standing — the wiring and wood bracing weren't a design feature, they were damage control. By the end, it looked less like an instrument's companion piece than something salvaged from a curbside pile: a chair that had been fixed just enough times to keep functioning, and no more.</p>
+  <p>Which raises the more interesting question the chair leaves behind, once the biography is set aside: what does good design even mean, if the answer depends entirely on who's using it? Judged on its own, this is not a well-made chair. It is unstable enough to require internal bracing. Its legs don't match. It has been pushed so far past its original purpose that it barely qualifies as a chair anymore. And yet, for exactly one person, for exactly one specific and unusual way of sitting at a piano, it seems to have worked perfectly — well enough that its owner would rather keep repairing a barely-standing folding chair than trust a new one built to the same specifications.</p>
+  <p>After Gould's death in October 1982, the chair passed to Library and Archives Canada along with the rest of his estate — some two hundred boxes of personal and professional material, acquired the following year. For over two decades it sat in a glass case in the library's music division on Wellington Street in Ottawa, visible to anyone who happened to walk past on the way to the elevators. In 2005 it was moved into storage, brought out only for occasional exhibitions. In June 2012, Library and Archives Canada transferred it, along with Gould's Steinway CD 318, as a permanent gift to the National Arts Centre.</p>
+  <p>The piano now has a fixed public home at the NAC, on permanent display outside Southam Hall. The chair does not. It's kept by the same institution, in the same city, but shown only on special occasions — which means that for most of any given year, the object this entire story is about is sitting somewhere most people will never see it: low to the ground, legs slightly uneven, waiting to be brought out again.</p>
+</section>
+
+<div class="final-space"></div>
 
 <footer>
   <p>Twelve</p>
