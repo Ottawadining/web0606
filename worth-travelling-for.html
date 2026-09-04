@@ -188,6 +188,47 @@
     text-underline-offset:3px;
   }
 
+  .story-photo-full{
+    width:100%;
+    margin-bottom:min(6vh, 56px);
+  }
+  .story-photo-full img{
+    width:100%;
+    max-height:560px;
+    object-fit:cover;
+    display:block;
+  }
+
+  .story-text-single{
+    max-width:680px;
+    margin:0 auto;
+  }
+  .story-text-single p{
+    font-size:16px;
+    line-height:1.85;
+    margin-bottom:24px;
+    text-align:left;
+  }
+  .story-text-single p:last-of-type{ margin-bottom:0; }
+  .story-black .story-text-single p{ color:var(--muted-light); }
+
+  .thesis{
+    background:var(--white);
+    padding:min(13vh, 130px) 32px;
+  }
+  .thesis-inner{
+    max-width:680px;
+    margin:0 auto;
+  }
+  .thesis-inner p{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(19px, 2.8vw, 25px);
+    line-height:1.55;
+    letter-spacing:-0.005em;
+  }
+
   @media(max-width:820px){
     .story-layout, .story-layout.reverse{
       grid-template-columns:1fr;
@@ -250,17 +291,23 @@
   <div class="story-inner">
     <p class="story-meta">Antheia</p>
     <h2>A restaurant built<br>around fermentation</h2>
-    <div class="story-layout">
-      <div class="story-photo">
-        <img src="worth-travelling-antheia.jpg" alt="A dish at Antheia, Ottawa">
-      </div>
-      <div class="story-text">
-        <p>Antheia is the newer of the two, and the more obviously singular. The entire restaurant is built around fermentation — not as a garnish or a technique borrowed for one course, but as the organizing idea behind everything that leaves the kitchen. Ingredients are cured, preserved, and aged for months before they ever reach a plate, and the sixteen-seat counter puts guests close enough to watch that process happen rather than simply hearing about it secondhand.</p>
-        <p>The restaurant arrived with unusually high expectations attached to it. Chef Briana Kim closed her celebrated Little Italy restaurant Alice at what was arguably its peak, then spent nearly two years developing something more deliberate in its place — a kitchen built from the ground up around a fermentation programme, rather than one that simply found room for it. That patience shows in the food. Nothing here feels rushed into being interesting; it feels like it had time to become genuinely itself.</p>
-        <p>What makes Antheia worth the drive isn't novelty. Plenty of restaurants lean on fermentation as a talking point, a single dish deployed for effect. Antheia has built an entire culinary philosophy around it, with a level of control and follow-through that isn't really replicable anywhere else in the city — and arguably not in very many other cities either.</p>
-        <p class="entry-meta">861 Somerset St W, Ottawa · <a href="https://www.exploretock.com/antheia" target="_blank" rel="noopener">exploretock.com/antheia</a></p>
-      </div>
+    <div class="story-photo-full">
+      <img src="worth-travelling-antheia.jpg" alt="A dish at Antheia, Ottawa">
     </div>
+    <div class="story-text-single">
+      <p>Antheia is the newer of the two, and the more obviously singular. The entire restaurant is built around fermentation — not as a garnish or a technique borrowed for one course, but as the organizing idea behind everything that leaves the kitchen. Ingredients are cured, preserved, and aged for months before they ever reach a plate, and the sixteen-seat counter puts guests close enough to watch that process happen rather than simply hearing about it secondhand.</p>
+      <p>The restaurant arrived with unusually high expectations attached to it. Chef Briana Kim closed her celebrated Little Italy restaurant Alice at what was arguably its peak, then spent nearly two years developing something more deliberate in its place — a kitchen built from the ground up around a fermentation programme, rather than one that simply found room for it. That patience shows in the food. Nothing here feels rushed into being interesting; it feels like it had time to become genuinely itself.</p>
+      <p>Kim's reputation extended well beyond Ottawa before Antheia existed. According to Canada's 100 Best, René Redzepi invited her to Copenhagen to lead the fermentation programme at Noma, widely regarded as one of the most influential restaurants in the world. She turned it down and chose to build something in Ottawa instead — a decision that says as much about where the city's culinary scene was heading as it does about her own priorities.</p>
+      <p>The menu is also entirely vegetarian, which at Antheia reads less like a dietary accommodation than a discipline. Restricting the palette this way forces the fermentation work to do more, not less — flavour and depth have to come from technique and time rather than from reaching for meat or fish to fill the gaps. It's a harder version of the same ambition, not an easier one.</p>
+      <p>What makes Antheia worth the drive isn't novelty. Plenty of restaurants lean on fermentation as a talking point, a single dish deployed for effect. Antheia has built an entire culinary philosophy around it, with a level of control and follow-through that isn't really replicable anywhere else in the city — and arguably not in very many other cities either. That combination is difficult to reproduce elsewhere, and not simply because fermentation takes patience. It requires a kitchen built specifically to support months-long timelines, a chef willing to walk away from an already-successful restaurant to build it, and a menu structured entirely around ingredients that can't be rushed toward a deadline. Most restaurants don't have the luxury of that kind of runway. Antheia was built around having it.</p>
+      <p class="entry-meta">861 Somerset St W, Ottawa · <a href="https://www.exploretock.com/antheia" target="_blank" rel="noopener">exploretock.com/antheia</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="thesis">
+  <div class="thesis-inner">
+    <p>Excellence isn't enough. Ottawa has restaurants that cook exceptionally well, restaurants with national reputations, and restaurants we'd recommend without hesitation. But travelling for dinner requires something rarer: the reasonable expectation that the experience waiting at the other end of the trip could not simply have been substituted for another very good reservation somewhere closer to home.</p>
   </div>
 </section>
 
@@ -268,16 +315,17 @@
   <div class="story-inner">
     <p class="story-meta">Atelier</p>
     <h2>Eighteen years of<br>refusing to repeat itself</h2>
-    <div class="story-layout reverse">
-      <div class="story-photo">
-        <img src="worth-travelling-atelier.jpg" alt="A course at Atelier, Ottawa">
-      </div>
-      <div class="story-text">
-        <p>Atelier takes the opposite approach to the same underlying instinct. There has never been an à la carte option here — only a tasting menu, and one that changes constantly enough that no two visits look alike. It's been running this way for close to two decades, which is long enough that the format itself has become the restaurant's entire identity rather than a stylistic choice made once and left alone.</p>
-        <p>That commitment carries real weight. Chef Marc Lepine has spent eighteen years refusing to let the menu settle into anything fixed. Ideas and techniques carry forward from one season to the next, the way they would in any serious kitchen — but the obligation remains the same: resist a fixed repertoire, and keep the idea moving, plate after plate, night after night.</p>
-        <p>The longevity hasn't produced a catalogue of signature dishes. There is no plate guests are guaranteed to find waiting for them years later. Ideas recur, techniques evolve, but the obligation remains the same: keep moving.</p>
-        <p class="entry-meta">540 Rochester St, Ottawa · <a href="https://www.atelierrestaurant.ca/" target="_blank" rel="noopener">atelierrestaurant.ca</a></p>
-      </div>
+    <div class="story-photo-full">
+      <img src="worth-travelling-atelier.jpg" alt="A course at Atelier, Ottawa">
+    </div>
+    <div class="story-text-single">
+      <p>Atelier takes the opposite approach to the same underlying instinct. There has never been an à la carte option here — only a tasting menu, and one that changes constantly enough that no two visits look alike. It's been running this way for close to two decades, which is long enough that the format itself has become the restaurant's entire identity rather than a stylistic choice made once and left alone.</p>
+      <p>That commitment carries real weight. Chef Marc Lepine has spent eighteen years refusing to let the menu settle into anything fixed. Ideas and techniques carry forward from one season to the next, the way they would in any serious kitchen — but the obligation remains the same: resist a fixed repertoire, and keep the idea moving, plate after plate, night after night.</p>
+      <p>The recognition behind that commitment is substantial. Lepine has won the Canadian Culinary Championship twice, in 2012 and 2016 — a level of national competitive success no other Ottawa chef has matched. Atelier has appeared on Canada's 100 Best eleven times since 2015, and in 2026 ranked as the highest-placed Ottawa restaurant on the list, ahead of every other local restaurant included that year. It isn't recognition earned for one exceptional evening. It's recognition earned across more than a decade of maintaining the same impossible standard.</p>
+      <p>The longevity hasn't produced a catalogue of signature dishes. There is no plate guests are guaranteed to find waiting for them years later. Ideas recur, techniques evolve, but the obligation remains the same: keep moving.</p>
+      <p>What a guest actually encounters is difficult to describe in advance, which is more or less the point. There's no menu to read beforehand, no dish to look up online and decide whether it sounds appealing. Courses arrive one at a time over the course of several hours, each one revealing what the kitchen has been working on without any indication of what comes next. It asks for a kind of trust most restaurants don't require — a guest has to be willing to hand the entire evening over to someone else's judgment, with no way of steering it once it begins.</p>
+      <p>That's a difficult thing to offer consistently for eighteen years, and an even harder thing to find replicated elsewhere. A city can have excellent tasting menus without having a kitchen willing to operate entirely without a fallback option, for decades, at a level that keeps earning national recognition rather than losing it. Atelier's case for the trip isn't really about any single dish. It's about handing an evening over to a kitchen that has never once used its own history as a shortcut.</p>
+      <p class="entry-meta">540 Rochester St, Ottawa · <a href="https://www.atelierrestaurant.ca/" target="_blank" rel="noopener">atelierrestaurant.ca</a></p>
     </div>
   </div>
 </section>
