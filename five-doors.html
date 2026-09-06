@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Five Doors — TWELVE</title>
+<meta name="description" content="Five entrances into the history and character of Ottawa. Issue 01, September 2026.">
+
+<!--
+  TWELVE · Issue 01 · Article 04 · DESIGN
+  "Five Doors"
+
+  IMAGE STATUS: all five door images are placed, each credited in its caption.
+  Licences: 01 CC BY-SA 3.0 (Robertson) · 02 CC BY 4.0 (Soloviev) ·
+  03 CC BY 4.0 (Soloviev) · 04 CC BY-SA 4.0 (LawrenceByrne, cropped) ·
+  05 CC BY-SA 2.5 (Ryan). See five-doors-production-notes.md for full source sheet.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ivory:#F7F4EC;
+    --ivory-deep:#EFE9DB;
+    --ink:#0B0A08;
+    --stone:#8A8073;      /* warm grey — captions, hairlines */
+    --stone-soft:#B5AC9C;
+    --measure:33rem;      /* body line length cap */
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:clamp(1.02rem,1rem + 0.35vw,1.15rem);
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  /* ——— chrome: as little as the house style allows ——— */
+  .head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:1.35rem clamp(1.25rem,5vw,3rem);
+    position:relative;z-index:3;
+  }
+  .head a{color:inherit;text-decoration:none;}
+  .wordmark{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:1.15rem;letter-spacing:.01em;
+  }
+  .issue-tag{
+    font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--stone);
+  }
+  .issue-tag:hover{color:var(--ink);}
+
+  p{margin:0 0 1.35em;}
+  .body p:last-child{margin-bottom:0;}
+
+  /* ——— shared type devices ——— */
+  .meta{
+    font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--stone);
+  }
+  .doornum{
+    font-family:"Fraunces",serif;font-weight:300;font-style:normal;
+    line-height:.8;letter-spacing:.02em;
+    font-variant-numeric:lining-nums;
+  }
+  .doorname{
+    font-family:"Fraunces",serif;font-weight:400;
+    line-height:1.05;letter-spacing:-.005em;
+    margin:0;
+  }
+  .body{max-width:var(--measure);}
+  .body p{font-size:1.06rem;}
+
+  figure{margin:0;}
+  figcaption{
+    font-size:.72rem;line-height:1.5;color:var(--stone);
+    letter-spacing:.01em;margin-top:.7rem;
+  }
+  figcaption a{color:inherit;text-decoration:underline;text-underline-offset:.15em;}
+
+  /* ——— image placeholder (delete when real <img> drops in) ——— */
+  .ph{
+    width:100%;height:100%;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;gap:.5rem;padding:2rem;
+    background:
+      repeating-linear-gradient(135deg,transparent 0 22px,rgba(138,128,115,.05) 22px 23px),
+      var(--ivory-deep);
+    border:1px solid var(--stone-soft);
+    color:var(--stone);
+  }
+  .ph.on-dark{
+    background:
+      repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.04) 22px 23px),
+      #17150F;
+    border-color:#3a352c;color:#9c9482;
+  }
+  .ph .tag{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;}
+  .ph .desc{font-size:.82rem;line-height:1.45;max-width:24ch;}
+  .frame{overflow:hidden;background:var(--ivory-deep);}
+  .frame img{display:block;width:100%;height:100%;object-fit:cover;}
+
+  /* ============================================================
+     OPENING — ivory, all air. Meta, the title, one deck line.
+     ============================================================ */
+  .cover{
+    padding:clamp(3rem,14vh,9rem) clamp(1.25rem,5vw,3rem) clamp(3.5rem,11vh,7rem);
+    max-width:60rem;
+  }
+  .cover .meta{display:block;margin-bottom:clamp(2.5rem,10vh,5rem);}
+  .cover h1{
+    font-family:"Fraunces",serif;font-weight:300;
+    font-size:clamp(4.2rem,20vw,13rem);
+    line-height:.86;letter-spacing:-.02em;margin:0;
+  }
+  .cover .deck{
+    font-family:"Fraunces",serif;font-style:italic;font-weight:400;
+    color:var(--stone);
+    font-size:clamp(1.15rem,1rem + 1.4vw,1.7rem);
+    margin:clamp(1.5rem,5vh,2.5rem) 0 0;max-width:24ch;
+  }
+
+  /* ============================================================
+     DOOR 01 — THE MONUMENTAL. The only black field in the piece.
+     Full-bleed portrait. Oversized numeral. Text in the dark.
+     ============================================================ */
+  .d01{background:var(--ink);color:var(--ivory);}
+  .d01 .stage{
+    min-height:88vh;width:100%;
+    display:grid;grid-template-rows:1fr;
+  }
+  .d01 .frame{height:88vh;background:#17150F;}
+  .d01 .plate{
+    padding:clamp(2rem,7vw,4.5rem) clamp(1.25rem,5vw,3rem) clamp(3rem,9vh,5rem);
+    display:grid;gap:clamp(1.5rem,5vw,2.5rem);
+  }
+  .d01 .headline{display:flex;align-items:flex-end;gap:clamp(1rem,4vw,2rem);}
+  .d01 .doornum{
+    font-size:clamp(4.5rem,17vw,9rem);color:var(--ivory);opacity:.92;
+  }
+  .d01 .doorname{
+    color:var(--ivory);
+    font-size:clamp(1.5rem,1rem + 3.5vw,2.9rem);font-weight:300;
+    padding-bottom:.1em;
+  }
+  .d01 .meta{color:var(--stone-soft);}
+  .d01 .body p{color:#E9E3D4;}
+  .d01 figcaption{color:#8b8474;}
+
+  /* ============================================================
+     DOOR 02 — THE INSTITUTIONAL. Ivory. Tall image, then a
+     narrow measure of text pushed to one side. Weighty, upright.
+     ============================================================ */
+  .d02{padding:clamp(3.5rem,11vh,7rem) clamp(1.25rem,5vw,3rem);}
+  .d02 .grid{
+    display:grid;gap:clamp(1.75rem,5vw,3rem);
+    grid-template-columns:1fr;max-width:70rem;
+  }
+  .d02 .frame{aspect-ratio:3/4;}
+  .d02 .kicker{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.1rem;}
+  .d02 .doornum{font-size:clamp(2.4rem,10vw,3.2rem);color:var(--stone-soft);}
+  .d02 .doorname{font-size:clamp(1.5rem,1rem + 3vw,2.4rem);}
+  .d02 .textwrap{align-self:end;}
+
+  /* ============================================================
+     DOOR 03 — THE UTILITARIAN. A small, old door adrift in
+     whitespace. The image is deliberately modest; the page
+     around it is not.
+     ============================================================ */
+  .d03{
+    padding:clamp(4rem,16vh,10rem) clamp(1.25rem,5vw,3rem);
+    display:grid;justify-items:center;text-align:center;
+  }
+  .d03 .doornum{
+    font-size:clamp(2rem,8vw,2.6rem);color:var(--stone-soft);
+    margin-bottom:2.5rem;
+  }
+  .d03 .frame{
+    aspect-ratio:4/3;width:min(84vw,440px);margin:0 auto;
+  }
+  .d03 figcaption{text-align:center;max-width:34ch;margin-left:auto;margin-right:auto;}
+  .d03 .doorname{
+    font-size:clamp(1.4rem,1rem + 2.6vw,2.1rem);
+    margin:clamp(2.5rem,7vh,4rem) auto 1.5rem;max-width:16ch;
+  }
+  .d03 .body{
+    text-align:left;margin:0 auto;
+    max-width:32rem;
+  }
+
+  /* ============================================================
+     DOOR 04 — THE ELEGANT. The most composed section: a tall
+     principal image with a small architectural detail inset
+     floating beside a refined column of text.
+     ============================================================ */
+  .d04{
+    background:var(--ivory-deep);
+    padding:clamp(3.5rem,11vh,7rem) clamp(1.25rem,5vw,3rem);
+  }
+  .d04 .grid{display:grid;gap:clamp(1.75rem,5vw,3rem);max-width:72rem;margin:0 auto;}
+  .d04 .principal{aspect-ratio:1280/1554;}
+  .d04 .kicker{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.1rem;}
+  .d04 .doornum{font-size:clamp(2.4rem,10vw,3.2rem);color:var(--stone);}
+  .d04 .doorname{font-size:clamp(1.5rem,1rem + 3vw,2.4rem);}
+  .d04 .detail{aspect-ratio:1/1;width:min(46vw,190px);}
+  .d04 .detail-row{
+    display:flex;gap:1.25rem;align-items:flex-start;margin-top:.5rem;
+  }
+  .d04 .detail-note{
+    font-size:.72rem;line-height:1.5;color:var(--stone);align-self:center;max-width:18ch;
+  }
+
+  /* ============================================================
+     DOOR 05 — THE ORDINARY. The page nearly empties. First the
+     plain building, its number and address, and a long silence.
+     Then, far below, the reveal. Ends in whitespace.
+     ============================================================ */
+  .d05-quiet{
+    padding:clamp(5rem,20vh,13rem) clamp(1.25rem,5vw,3rem) clamp(3rem,10vh,6rem);
+    display:grid;justify-items:center;text-align:center;
+  }
+  .d05-quiet .frame{aspect-ratio:1920/1112;width:min(92vw,600px);}
+  .d05-quiet .stamp{margin-top:clamp(2rem,6vh,3rem);}
+  .d05-quiet .doornum{font-size:clamp(2rem,8vw,2.6rem);color:var(--stone-soft);}
+  .d05-quiet .addr{
+    font-family:"Fraunces",serif;font-weight:400;font-size:1.05rem;
+    color:var(--stone);margin-top:.9rem;letter-spacing:.01em;
+  }
+  .d05-gap{height:clamp(6rem,26vh,16rem);}
+  .d05-reveal{
+    padding:0 clamp(1.25rem,5vw,3rem) clamp(8rem,30vh,18rem);
+    display:grid;justify-items:center;
+  }
+  .d05-reveal .body{max-width:34rem;}
+  .d05-reveal .body p{font-size:1.08rem;}
+  .d05-reveal .lead::first-letter{
+    font-family:"Fraunces",serif;font-weight:400;
+  }
+
+  /* ——— footer: the house convention, nothing else ——— */
+  footer{
+    padding:clamp(3rem,9vh,6rem) 0 clamp(2.5rem,7vh,4rem);
+    text-align:center;
+  }
+  footer .mark{
+    font-family:"Fraunces",serif;font-weight:400;font-size:.95rem;
+    color:var(--stone);letter-spacing:.02em;
+  }
+
+  /* ——— wider screens: let the composed sections breathe sideways ——— */
+  @media(min-width:820px){
+    .d01 .stage{grid-template-columns:1.15fr .85fr;grid-template-rows:auto;}
+    .d01 .frame{height:100vh;min-height:640px;}
+    .d01 .plate{align-content:center;min-height:100vh;}
+    .d02 .grid{grid-template-columns:.9fr 1.1fr;align-items:stretch;}
+    .d02 .frame{aspect-ratio:auto;min-height:78vh;}
+    .d02 .textwrap{max-width:30rem;padding-bottom:2rem;}
+    .d04 .grid{grid-template-columns:1fr 1fr;align-items:center;}
+  }
+
+  @media(prefers-reduced-motion:no-preference){
+    .cover h1,.cover .deck,.cover .meta{
+      opacity:0;transform:translateY(14px);
+      animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    .cover .meta{animation-delay:.05s;}
+    .cover h1{animation-delay:.14s;}
+    .cover .deck{animation-delay:.5s;}
+    @keyframes rise{to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <a class="wordmark" href="index.html">Twelve</a>
+  <a class="issue-tag" href="september-2026.html">Issue 01</a>
+</header>
+
+<!-- ============ OPENING ============ -->
+<section class="cover">
+  <span class="meta">Design · Issue 01 · September 2026</span>
+  <h1>Five Doors</h1>
+  <p class="deck">There is more than one way into a city.</p>
+</section>
+
+<!-- ============ DOOR 01 · THE MONUMENTAL ============ -->
+<section class="d01">
+  <div class="stage">
+    <figure class="frame">
+      <img src="senate-bronze-doors-robertson.jpg"
+           alt="The bronze south-entrance doors of the Senate of Canada Building — two tall leaves, each carrying four circular reliefs of abstracted Canadian landscapes and wildlife, set in a glazed modernist entrance.">
+    </figure>
+    <div class="plate">
+      <div class="headline">
+        <span class="doornum">01</span>
+        <h2 class="doorname">The Senate<br>bronze doors</h2>
+      </div>
+      <div class="body">
+        <p>Nearly twenty feet of bronze, hammered by hand. The doors at the south entrance of the Senate of Canada Building — for half a century Ottawa’s Union Station — were made in 1973 by the Ottawa sculptor Bruce Garner, who titled the work <em>Reflections of Canada</em>. Eight roundels spread across the two leaves, abstracted landscapes and animals standing in for the regions of the country.</p>
+        <p>Garner sized them for an audience. They went in that spring, ahead of a Commonwealth summit; in July the Queen stopped to look, and two days later twenty-four heads of government passed through them on the way to a meeting on nuclear testing. They were built to be walked through by people arriving to decide something. The entrance behind them is not, as a rule, open to the public.</p>
+      </div>
+      <figcaption>Bruce Garner, <em>Reflections of Canada</em> (1973), Senate of Canada Building, 2 Rideau Street. Photograph by D. Gordon E. Robertson, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC&nbsp;BY-SA&nbsp;3.0</a>.</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOOR 02 · THE INSTITUTIONAL ============ -->
+<section class="d02">
+  <div class="grid">
+    <figure class="frame">
+      <img src="east-block-entrance-soloviev.jpg"
+           alt="The ceremonial entrance of East Block, Parliament Hill: a pointed Gothic arch in pale sandstone over heavy studded timber doors, with a carved tympanum of the royal arms above.">
+    </figure>
+    <div class="textwrap">
+      <div class="kicker">
+        <span class="doornum">02</span>
+        <h2 class="doorname">East Block,<br>Parliament Hill</h2>
+      </div>
+      <div class="body">
+        <p>East Block went up before the country did. Work began in 1859, eight years before Confederation, to a design by Thomas Stent and Augustus Laver: pointed arches, Nepean sandstone, timber set deep in the wall.</p>
+        <p>The manner was borrowed from the Palace of Westminster, newly rebuilt in London — which is another way of saying the architects were answering a question that had no local answer yet. What should a Canadian government look like? There was no precedent to copy, so they built the appearance of permanence first and let the institution move in afterward.</p>
+        <p>The doors are heavy the way the whole building is heavy, on purpose, as an argument about the seriousness of what happens behind them. It remains one of only two buildings on the Hill still largely as it was first built.</p>
+      </div>
+      <figcaption>The ceremonial entrance, East Block, Parliament Hill. Thomas Stent and Augustus Laver, first occupied 1865. Photograph by Hayden Soloviev, <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>.</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOOR 03 · THE UTILITARIAN ============ -->
+<section class="d03">
+  <span class="doornum">03</span>
+  <figure class="frame">
+    <img src="commissariat-bytown-museum-soloviev.jpg"
+         alt="The grey limestone facade of the Commissariat Building, now the Bytown Museum, its red-painted supply doors stacked on three levels, the ground-floor entrance standing open.">
+  </figure>
+  <figcaption>The Commissariat Building, Ottawa Locks. Built 1827; now the Bytown Museum. Photograph by Hayden Soloviev, <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>.</figcaption>
+  <h2 class="doorname">The Commissariat Building</h2>
+  <div class="body">
+    <p>The oldest door here opened onto sacks and barrels. The Commissariat Building was finished in 1827, a storehouse for the crews digging the Rideau Canal, and it is still the oldest stone building in Ottawa — though there was no Ottawa then, only Bytown, and barely that.</p>
+    <p>The Royal Engineers built it plain: three storeys of local limestone, walls two and a half feet thick, a supply door on every level. Behind the ground-floor entrance sat the vault — black powder, rations, and the money to pay the men. Nobody was meant to be impressed. The door had a job, which was to let necessary things in and out and keep the rest locked up.</p>
+    <p>That the canal was begun at this spot is the reason the city exists at all. The building makes no claim about it.</p>
+  </div>
+</section>
+
+<!-- ============ DOOR 04 · THE ELEGANT ============ -->
+<section class="d04">
+  <div class="grid">
+    <figure class="frame principal">
+      <img src="bank-of-nova-scotia-lawrencebyrne.jpg"
+           alt="The Beaux-Arts sandstone facade of the former Bank of Nova Scotia at 125 Sparks Street: four fluted Doric columns beneath the carved name and the date 1924, above a modest street-level entrance.">
+    </figure>
+    <div class="textwrap">
+      <div class="kicker">
+        <span class="doornum">04</span>
+        <h2 class="doorname">125 Sparks<br>Street</h2>
+      </div>
+      <div class="body">
+        <p>A bank has to look like it will still be there tomorrow. That is most of what the entrance at 125 Sparks Street was designed to say. John M. Lyle finished it in 1925 in a severe classical order — sandstone, a carved frieze worked with Canadian motifs, a door of mahogany and bronze — the most disciplined building he ever made.</p>
+        <p>None of it was required to hold money; a plainer vault would have done. The columns and the stonework were there to persuade, in the years when a person deciding where to keep their savings had little to go on but the face a building showed the street. The argument was solvency, dressed as permanence.</p>
+        <p>It held until it didn’t. The bank left in the 1980s, and the building now keeps part of the collection of the Library of Parliament.</p>
+      </div>
+      <figcaption>Former Bank of Nova Scotia, 125 Sparks Street. John M. Lyle, 1924–25; now part of the Library of Parliament. Photograph by LawrenceByrne / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> (cropped).</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOOR 05 · THE ORDINARY ============ -->
+<!-- First: the plain building, its number, its address. Then a long silence. -->
+<section class="d05-quiet">
+  <figure class="frame">
+    <img src="gouzenko-apartment-511-somerset-ryan.jpg"
+         alt="511 Somerset Street West: an ordinary two-storey red brick apartment building with small round windows flanking a recessed entrance, seen straight-on from across the street; the number 511 on the pale front door.">
+  </figure>
+  <div class="stamp">
+    <div class="doornum">05</div>
+    <div class="addr">511 Somerset Street West</div>
+    <figcaption>Photograph by Padraic Ryan / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC&nbsp;BY-SA&nbsp;2.5</a>.</figcaption>
+  </div>
+</section>
+
+<div class="d05-gap" aria-hidden="true"></div>
+
+<!-- Then, far below: the reveal. -->
+<section class="d05-reveal">
+  <div class="body">
+    <p class="lead">This one you would walk past. Two storeys of brick on Somerset Street West, a few small round windows, a Beer Store next door and a park across the road. It went up in the early 1940s, after a fire took the row that had stood there, and it has changed very little since. Nothing about it asks to be looked at.</p>
+    <p>On the evening of 5 September 1945, a cipher clerk from the Soviet embassy named Igor Gouzenko came home to apartment 4 carrying a hundred and nine documents he had taken from the embassy files. For two days no one — not the newspaper, not the Minister of Justice’s office — would take them from him. On the second night, while men from the embassy searched his apartment, Gouzenko and his family waited in a neighbour’s rooms across the hall.</p>
+    <p>The papers set out a Soviet spy network operating inside Canada, the United States and Britain — against countries that had, weeks earlier, been allies. Historians tend to date the public beginning of the Cold War to that week, and to this address.</p>
+    <p>There is a plaque, but it is across the street, in the park where the police kept watch that night. The door has none. You could stand in front of it tomorrow, knowing everything that happened behind it, and the brick would still tell you nothing at all.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="mark">Twelve</span>
+</footer>
+
+</body>
+</html>
